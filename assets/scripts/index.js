@@ -207,6 +207,8 @@ function init()
     attackBtn.addEventListener('click',player.attack);
     phealth.style.transform = `translateX(100%)`;
     mhealth.style.transform = `translateX(-100%)`;
+    mhp.innerHTML = `100 HP`;
+    php.innerHTML = `100 HP`;;
     
    
 }
