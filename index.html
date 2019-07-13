@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,35 @@
     <title>Slaying Monsters</title>
     <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
+
 <body>
-    
+
     <header>
         <p>SLAYING MONSTERS</p>
     </header>
 
     <main>
-        <div id="pbar">
-            <div class="white"></div>
+        <div id="health">
+            <div class="container">
+                <div class="circle"></div>
+                <div id="pbar">
+                    <div class="white"></div>
+
+                </div>
+            </div>
+
+            <div class="container ">
+                <div class="circle left"></div>
+                <div id="mbar">
+                    <div class="white"></div>
+                </div>
+            </div>
+
         </div>
-        <div id="mbar">
-            <div class="white"></div>
-        </div>
+
     </main>
 
     <script src="./assets/scripts/index.js"></script>
 </body>
+
 </html>
