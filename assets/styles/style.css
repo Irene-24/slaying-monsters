@@ -1,3 +1,10 @@
+@font-face
+{
+    font-family: Sker;
+    src: url('../fonts/DEMON\ SKER.ttf')
+}
+
+/* GENERAL */
 *
 {
     padding: 0;
@@ -7,9 +14,39 @@
 
 body
 {
-    background: red;
+    background: #b3e6ff;
+    background-image: url('../images/bg.jpg');
+    background-position: 50% 50%;;
+    background-repeat: no-repeat;
+    min-height:100vh; 
+    background-size:100% 100%;
     font-size: 14px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 /* HEADER */
+
+header
+{
+    font-family: Sker,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding: 14px;
+    font-size: 3em;
+
+}
+
+header p
+{
+    border:5px double #043070; 
+    padding: 10px;
+    color:#3f3f3e;
+}
+
+@media (min-width:768px)
+{
+    header
+    {
+        font-size: 4em;
+    }
+}
