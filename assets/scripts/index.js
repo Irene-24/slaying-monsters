@@ -91,7 +91,7 @@ class Monster extends Character
             {
                 scratch:30,
                 bite:30,
-                roar:10
+                roar:20
             };
         const keys = Object.keys(moves)  ;
         const index = Math.round((keys.length - 1) * Math.random());
