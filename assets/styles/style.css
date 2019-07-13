@@ -102,7 +102,7 @@ header p
     width:50px;
     height:50px;
     top:-8px;
-    background: #043070;
+    background: #385d94;
     border-radius: 50%;
     z-index:100;
     box-shadow: -5px 0 5px red; 
@@ -112,4 +112,88 @@ header p
 {
     right: 0;
     box-shadow: 5px 0 5px red; 
+}
+
+/* CONTROLS */
+#controls
+{
+    width:70vw;
+    margin: auto;
+    text-align: center;
+}
+
+#controls button
+{
+    padding: 10px;
+    border-radius: 4px;
+    border:none;
+    cursor: pointer;
+    color: white;
+}
+
+#attack
+{
+    background: #ff66cc;
+}
+
+#heal
+{
+    background: #577e08;
+}
+
+#controls button:hover
+{
+    box-shadow: 0 0 4px #616160;
+    font-size: 1.2em;
+    transition: all 200ms ease;
+}
+
+@media(min-width:768px)
+{
+    #controls
+    {
+        width:40vw;
+    }
+
+}
+
+/* ARENA */
+#arena
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 20px;
+    position: relative;
+}
+
+#player,#monster
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width:478px)
+{
+    #player img,#monster img
+    {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-width:768px)
+{
+    #player img
+    {
+        transform: translateX(25vw);
+    }
+}
+
+@media (min-width:1440px)
+{
+    #player img
+    {
+        transform: translateX(35vw);
+    }
 }
