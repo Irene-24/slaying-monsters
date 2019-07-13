@@ -14,7 +14,8 @@
 
 body
 {
-    background: #b3e6ff;
+    background: #b3e6ff;    
+    overflow-x: hidden;
     background-image: url('../images/bg.jpg');
     background-position: 50% 50%;;
     background-repeat: no-repeat;
@@ -87,13 +88,19 @@ header p
     background: white;
     width:100%;
     height: 100%;
-    transform: translateX(90%);
+    transform: translateX(100%);
     transition: transform 1s ease;
 }
 
 #mbar .white
 {
-    transform: translateX(-90%);
+    transform: translateX(-100%);
+}
+
+#php,#mhp
+{
+    color:white;
+    font-size: 2em;
 }
 
 .circle
@@ -141,11 +148,17 @@ header p
     background: #577e08;
 }
 
-#controls button:hover
+#controls button:not(:disabled):hover
 {
     box-shadow: 0 0 4px #616160;
     font-size: 1.2em;
     transition: all 200ms ease;
+}
+
+#heal:disabled,#attack:disabled
+{
+    background: #616160;
+    cursor: not-allowed;
 }
 
 @media(min-width:768px)
@@ -161,46 +174,70 @@ header p
 #arena
 {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 1fr 1fr;
+    width:100vw;
+    justify-content: center;
+    align-content: center;
+    max-width: 100vw;
     margin-top: 20px;
     position: relative;
 }
 
-#player,#monster
+#player div, #monster div
 {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    width:40%;
 }
 
 
+#player div img, #monster div img
+{
+    width:100%;
+}
 
 .hidden
 {
-    width:192px;
-    position: absolute;
-    top:0;
-    left:0;
+   position: absolute;
+   top:0;
+   z-index:500;
 }
 
-#monster .hidden
+.toggle
 {
-    right:0;
+    display: none;
 }
-
 
 @media (min-width:768px)
 {
-    #player img
-    {
-        transform: translateX(25vw);
-    }
+
 }
 
-@media (min-width:1440px)
+#modal
 {
-    #player img
-    {
-        transform: translateX(35vw);
-    }
+    background: #6d6e6cc9;
+    display: none;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    padding-top:20%;
+}
+
+#message
+{
+    color: white;
+    font-size: 3em;
+}
+
+#modal button
+{
+    background: #577e08;
+    font-size: 1.5em;
+    color:white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px auto;
+    border: none;
 }

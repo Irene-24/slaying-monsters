@@ -18,7 +18,7 @@
     <main>
         <div id="health">
             <div class="container">
-                <div class="circle"></div>
+                <div  class="circle"><p id="php">100 HP</p></div>
                 <div id="pbar">
                     <div class="white"></div>
 
@@ -26,7 +26,9 @@
             </div>
 
             <div class="container ">
-                <div class="circle left"></div>
+                <div  class="circle left">
+                    <p id="mhp">100 HP</p>
+                </div>
                 <div id="mbar">
                     <div class="white"></div>
                 </div>
@@ -41,20 +43,25 @@
 
         <div id="arena">
             <div id="player">
-                <img src="./assets/images/man.png" alt="">
-                <img id="punch" class="hidden" src="./assets/images/man_punch.png" alt="">
-                <img id="kick" class="hidden" src="./assets/images/man_kick.png" alt="">
-                <img id="sword" class="hidden" src="./assets/images/sword.png" alt="">
+                <div> <img id="playerInit" src="./assets/images/man.png" alt=""> </div>
+                <div class="hidden toggle" > <img id="punch"  src="./assets/images/man_punch.png" alt=""> </div>
+                <div class="hidden toggle" > <img id="kick"  src="./assets/images/man_kick.png" alt=""> </div>
+                <div class="hidden toggle" > <img id="sword"  src="./assets/images/sword.png" alt=""> </div>
             </div>
             <div id="monster">
-                <img src="./assets/images/monster.png" alt="">
-                <img id="bite" class="hidden" src="./assets/images/teeth.png" alt="">
-                <img id="scratch" class="hidden" src="./assets/images/claw.png" alt="">
-                <img id="roar" class="hidden" src="./assets/images/roar.png" alt="">
+                <div> <img id="monsterInit" src="./assets/images/monster.png" alt=""> </div>
+                <div class="hidden toggle" > <img id="bite"  src="./assets/images/teeth.png" alt=""> </div>
+                <div class="hidden toggle" > <img id="scratch"  src="./assets/images/claw.png" alt=""> </div>
+                <div class="hidden toggle" > <img id="roar"  src="./assets/images/roar.png" alt=""> </div>
             </div>
-        </div>
+        </div> 
 
     </main>
+
+    <section id="modal">
+        <h3 id="message">Winner</h3>
+        <button id="restart">RESTART</button>
+    </section>
 
     <script src="./assets/scripts/index.js"></script>
 </body>
